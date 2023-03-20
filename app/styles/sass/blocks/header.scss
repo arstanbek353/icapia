@@ -1,0 +1,46 @@
+.header {
+	&__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 8.6rem;
+  }
+  &__logo {
+    display: inline-block;
+    width: 18.1rem;
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+  &__links {
+    display: inline-block;
+    font-weight: 600;
+    color: #414141;
+    text-transform: uppercase;
+    margin-right: 8.5rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__controlls {
+    display: flex;
+    align-items: center;
+  }
+  &__search {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 6.6rem;
+    @include img-contain;
+  }
+  &__cart {
+    width: 3rem;
+    height: 2.6rem;
+    margin-right: 6.6rem;
+    @include img-contain;
+  }
+  &__login {
+    font-weight: 700;
+    color: #FA5507;
+  }
+}

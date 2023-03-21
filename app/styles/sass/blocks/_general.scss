@@ -8,4 +8,21 @@
   font-size: 6rem;
   line-height: 115.4%;
   margin-bottom: 5.6rem;
+  @media (max-width: 48em) {
+    font-size: 3.2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.only-pc {
+  display: block;
+  @media (max-width: 48em) {
+    display: none;
+  }
+}
+.only-sp {
+  display: none;
+  @media (max-width: 48em) {
+    display: block;
+  }
 }

@@ -155,4 +155,82 @@
   &__next {
     background-image: url(../images/dist/next-1.svg);
   }
+  @media (max-width: 48em) {
+    &--index {
+      font-size: 1rem;
+      margin-bottom: 9rem;
+    }
+    &__slide {
+      border-radius: 4.3em;
+      width: 100%;
+      height: 44.1em;
+      margin-right: 0;
+    }
+    &__content {
+      padding: 2.1em 3.4em;
+      z-index: 2;
+      background: #FFFFFF;
+      box-shadow: 0 -1em 2em -0.5em rgba(0, 0, 0, 0.08);
+      border-radius: 4.2em;
+    }
+    &__title {
+      margin-bottom: 0.8em;
+      &-em {
+        font-size: 1.8em;
+      }
+    }
+    &__description {
+      &-em {
+        font-size: 0.9em;
+      }
+    }
+    &__chars {
+      margin-bottom: 1.5em;
+    }
+    &__chars-item {
+      width: 50%;
+    }
+    &__chars-k {
+      margin-bottom: 0.5em;
+      &-em {
+        font-size: 1em;
+      }
+    }
+    &__chars-v {
+      &-em {
+        font-size: 1.3em;
+      }
+    }
+    &__icon {
+      letter-spacing: 0.025em;
+      color: #333333;
+      margin-right: 2em;
+      &-em {
+        font-size: 1em;
+      }
+      img {
+        width: 2em;
+        height: 2em;
+        margin-right: 0.6em;
+      }
+    }
+    &__controllers {
+      justify-content: flex-start;
+      min-height: 4em;
+      margin-top: 2em;
+    }
+    &__pag {
+      .bullet {
+        width: 0.7em;
+        height: 0.7em;
+        margin-right: 0.7em;
+      }
+    }
+    &__prev,
+    &__next {
+      width: 4em;
+      height: 4em;
+    }
+
+  }
 }

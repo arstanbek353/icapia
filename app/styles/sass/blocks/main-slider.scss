@@ -142,4 +142,79 @@
   &__next::after {
     background-image: url(../images/dist/arrow-right-alt.svg);
   }
+  @media (max-width: 48em) {
+    margin-bottom: 2rem;
+    &__slide {
+      border-radius: 2rem;
+    }
+    &__img {
+      @include img-cover;
+    }
+    &__content {
+      min-height: 57.1rem;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      padding: 3.6rem 1.5rem;
+    }
+    &__left {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
+    &__title {
+      font-size: 2.8rem;
+      margin-bottom: 1.4rem;
+    }
+    &__description {
+      font-size: 1.4rem;
+      margin-bottom: 4rem;
+    }
+    &__link {
+      min-width: auto;
+      width: 100%;
+      font-size: 1.8rem;
+      padding: 1.28rem 2.1rem;
+      &::before,
+      &::after {
+        width: 1.8rem;
+        height: 1.8rem;
+      }
+    }
+    &__right {
+      display: none;
+    }
+    &__controllers {
+      left: 0;
+      top: 1.5rem;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      padding: 1.5rem;
+      z-index: 3;
+    }
+    &__pag {
+      width: auto;
+      height: auto;
+      gap: 0.7rem;
+      .swiper-pagination-bullet {
+        flex-grow: 0;
+        width: 0.7rem;
+        height: 0.7rem;
+        border-radius: 100%;
+        background-color: rgba($color: #ffffff, $alpha: 0.3) !important;
+      }
+      .line {
+        display: none;
+      }
+      .swiper-pagination-bullet-active {
+        background-color: rgba($color: #ffffff, $alpha: 1) !important;
+      }
+    }
+    &__nav {
+      display: none;
+    }
+  }
 }

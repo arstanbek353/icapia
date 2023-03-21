@@ -43,4 +43,56 @@
     font-weight: 700;
     color: #FA5507;
   }
+
+  &__burger {
+    display: none;
+  }
+  @media (max-width: 48em) {
+    &__inner {
+      min-height: 5.8rem;
+    }
+    &__logo {
+      width: 13.3rem;
+    }
+    &__nav {
+      display: flex;
+      align-items: center;
+      display: none;
+    }
+    &__links {
+      display: inline-block;
+      font-weight: 600;
+      color: #414141;
+      text-transform: uppercase;
+      margin-right: 8.5rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &__controlls {
+      display: flex;
+      align-items: center;
+    }
+    &__search {
+      margin-right: 2.8rem;
+    }
+    &__cart {
+      width: 3rem;
+      height: 2.6rem;
+      margin-right: 6.6rem;
+      display: none;
+    }
+    &__login {
+      font-weight: 700;
+      color: #FA5507;
+      display: none;
+    }
+
+    &__burger {
+      display: inline-block;
+      width: 3.4rem;
+      height: 3.4rem;
+      @include img-contain;
+    }
+  }
 }

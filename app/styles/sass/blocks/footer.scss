@@ -18,11 +18,13 @@
     margin-bottom: 4rem;
   }
   &__tel {
+    display: block;
     font-weight: 500;
     font-size: 2.6rem;
     margin-bottom: 1rem;
   }
   &__email {
+    display: block;
     margin-bottom: 3rem;
   }
   &__socs {
@@ -74,6 +76,69 @@
     img {
       height: 100%;
       width: auto;
+    }
+  }
+
+  &__mob {
+    display: none;
+  }
+  @media (max-width: 48em) {
+    padding: 2.4rem 0;
+    &__inner {
+      display: block;
+    }
+    &__left {
+      margin-bottom: 3.8rem;
+    }
+    &__logo {
+      width: 13.3rem;
+      margin-bottom: 0;
+    }
+    &__tel {
+      font-size: 2.6rem;
+      margin-bottom: 1rem;
+    }
+    &__list {
+      display: block;
+      margin-bottom: 5rem;
+    }
+    &__item {
+      min-width: auto;
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 3.5rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &__title {
+      font-size: 1.8rem;
+      margin-bottom: 1.4rem;
+    }
+    &__links {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__link {
+      width: 50%;
+      margin-bottom: 1.5rem;
+    }
+    &__app {
+      margin-bottom: 4rem;
+    }
+    &__app-title {
+      font-size: 1.4rem;
+      margin-bottom: 0.7rem;
+    }
+    &__app-link {
+      height: 3.7rem;
+    }
+
+    &__desk {
+      display: none;
+    }
+    &__mob {
+      display: block;
     }
   }
 }

@@ -1,0 +1,104 @@
+<div class="catalog-filter">
+  <button class="catalog-filter__open" type="button">
+    <img src="images/dist/filter.svg" alt="">
+    Filters
+  </button>
+  <form class="catalog-filter__content">
+    <div class="catalog-filter__head">
+      Filters
+      <button class="catalog-filter__close" type="button">
+        <img src="images/dist/x-btn.svg" class="only-sp" alt="">
+      </button>
+    </div>
+    <div class="catalog-filter__list">
+      <div class="catalog-filter__item">
+        <div class="catalog-filter__title">Price</div>
+        <div class="catalog-filter__range">
+          <input 
+            type="text" 
+            class="js-range-slider" 
+            name="my_range_id" 
+            id="my_range_id" 
+            value=""
+            data-type="double"
+            data-min="0"
+            data-max="19000"
+            data-from="0"
+            data-to="10000"
+            data-hide-min-max="true"
+            data-hide-from-to="true"
+          />
+          <div class="catalog-filter__range-inputs">
+            <input type="number" 
+              value="0"
+              class="catalog-filter__range-input catalog-filter__range-input--from">
+            <span></span>
+            <input type="number" 
+              value="10000"
+              class="catalog-filter__range-input catalog-filter__range-input--to">
+          </div>
+        </div>
+      </div>
+      <div class="catalog-filter__item">
+        <div class="catalog-filter__title">Power</div>
+        <div class="catalog-filter__checkboxes">
+          <label class="catalog-filter__label">
+            <input type="checkbox" name="name_1" class="catalog-filter__radiocheck" hidden>
+            <span class="catalog-filter__check"></span>
+            <span class="catalog-filter__input-name">7 kW</span>
+          </label>
+          <label class="catalog-filter__label">
+            <input type="checkbox" name="name_2" class="catalog-filter__radiocheck" hidden>
+            <span class="catalog-filter__check"></span>
+            <span class="catalog-filter__input-name">11 kW</span>
+          </label>
+          <label class="catalog-filter__label">
+            <input type="checkbox" name="name_3" class="catalog-filter__radiocheck" hidden>
+            <span class="catalog-filter__check"></span>
+            <span class="catalog-filter__input-name">20 kW</span>
+          </label>
+          <label class="catalog-filter__label">
+            <input type="checkbox" name="name_4" class="catalog-filter__radiocheck" hidden>
+            <span class="catalog-filter__check"></span>
+            <span class="catalog-filter__input-name">40 kW</span>
+          </label>
+        </div>
+      </div>
+      <div class="catalog-filter__item">
+        <div class="catalog-filter__title">Connector</div>
+        <div class="catalog-filter__radios">
+          <label class="catalog-filter__label">
+            <input type="radio" name="radio_name" value="radio_1" class="catalog-filter__radiocheck" hidden>
+            <span class="catalog-filter__check"></span>
+            <span class="catalog-filter__input-name">CHADEMO</span>
+          </label>
+          <label class="catalog-filter__label">
+            <input type="radio" name="radio_name" value="radio_2" class="catalog-filter__radiocheck" hidden>
+            <span class="catalog-filter__check"></span>
+            <span class="catalog-filter__input-name">CCS Combo 2</span>
+          </label>
+          <label class="catalog-filter__label">
+            <input type="radio" name="radio_name" value="radio_3" class="catalog-filter__radiocheck" hidden>
+            <span class="catalog-filter__check"></span>
+            <span class="catalog-filter__input-name">GB/T</span>
+          </label>
+          <label class="catalog-filter__label">
+            <input type="radio" name="radio_name" value="radio_4" class="catalog-filter__radiocheck" hidden>
+            <span class="catalog-filter__check"></span>
+            <span class="catalog-filter__input-name">TYPE 2</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="catalog-filter__actions">
+      <button class="catalog-filter__reset" type="button">
+        <img src="images/dist/x-btn.svg" alt="">
+        Clear
+      </button>
+      <button class="btn catalog-filter__apply" type="button">
+        <img src="images/dist/check.svg" class="before" alt="">
+        Apply filters
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,4 +1,10 @@
 .header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #F8F8F8;
 	&__inner {
     display: flex;
     justify-content: space-between;

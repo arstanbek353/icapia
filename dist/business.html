@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>ICAPIA</title>
+	<meta name="description" content="ICAPIA">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="icon" href="images/favicon.png">
+	<!-- <meta property="og:image" content="images/dist/preview.jpg"> -->
+	
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/ion.rangeSlider.min.css">
+	<link rel="stylesheet" href="css/app.min.css">
+  
+  <script src="js/jquery-3.6.4.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/ion.rangeSlider.min.js"></script>
+
+</head>
+
+<body>
+  <div class="root">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a href="/" class="header__logo">
+            <img src="images/dist/logo.svg" alt="logo">
+          </a>
+          <nav class="header__nav">
+            <a href="/product" class="header__links">Products for home</a>
+            <a href="/business" class="header__links">Products for business</a>
+            <a href="/resources" class="header__links">Resources</a>
+            <a href="/company" class="header__links">Company</a>
+          </nav>
+          <div class="header__controlls">
+            <button class="header__search">
+              <img src="images/dist/search.svg" alt="">
+            </button>
+            <a href="/" class="header__cart">
+              <img src="images/dist/cart.svg" alt="">
+            </a>
+            <a href="/" class="header__login">LOGIN</a>
+            <button class="header__burger">
+              <img src="images/dist/burger.svg" alt="">
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+  <div class="catalog-wrapper">
+    <div class="container">
+      <div class="catalog-wrapper__head">
+        <div class="catalog-head">
+  <div class="brc">
+    <a href="/" class="brc__link">Home</a>
+    <a href="/" class="brc__link active">Products for home</a>
+  </div>
+  <div class="catalog-head__title">Products for business</div>
+  <form class="catalog-head__sort">
+    <label class="catalog-head__label">
+      <input type="radio" name="sort" value="sort_1" class="catalog-head__input" hidden checked>
+      <span class="catalog-head__label-text">New</span>
+    </label>
+    <label class="catalog-head__label">
+      <input type="radio" name="sort" value="sort_2" class="catalog-head__input" hidden>
+      <span class="catalog-head__label-text">Popular</span>
+    </label>
+    <label class="catalog-head__label">
+      <input type="radio" name="sort" value="sort_3" class="catalog-head__input" hidden>
+      <span class="catalog-head__label-text">CHADEMO</span>
+    </label>
+    <label class="catalog-head__label">
+      <input type="radio" name="sort" value="sort_4" class="catalog-head__input" hidden>
+      <span class="catalog-head__label-text">Type2</span>
+    </label>
+    <label class="catalog-head__label">
+      <input type="radio" name="sort" value="sort_5" class="catalog-head__input" hidden>
+      <span class="catalog-head__label-text">CCS2 (Combo2)</span>
+    </label>
+    <label class="catalog-head__label">
+      <input type="radio" name="sort" value="sort_6" class="catalog-head__input" hidden>
+      <span class="catalog-head__label-text">In-Body Holster</span>
+    </label>
+    <label class="catalog-head__label">
+      <input type="radio" name="sort" value="sort_7" class="catalog-head__input" hidden>
+      <span class="catalog-head__label-text">Separate Holster</span>
+    </label>
+  </form>
+</div>
+      </div>
+      <div class="catalog-wrapper__inner">
+        <div class="catalog-wrapper__aside">
+          <div class="catalog-filter">
+  <button class="catalog-filter__open" type="button">
+    <img src="images/dist/filter.svg" alt="">
+    Filters
+  </button>
+  <form class="catalog-filter__content">
+    <div class="catalog-filter__head">
+      Filters
+      <button class="catalog-filter__close" type="button">
+        <img src="images/dist/x-btn.svg" class="only-sp" alt="">
+      </button>
+    </div>
+    <div class="catalog-filter__list">
+      <div class="catalog-filter__item">
+        <div class="catalog-filter__title">Price</div>
+        <div class="catalog-filter__range">
+          <input 
+            type="text" 
+            class="js-range-slider" 
+            name="my_range_id" 
+            id="my_range_id" 
+            value=""
+            data-type="double"
+            data-min="0"
+            data-max="19000"
+            data-from="0"
+            data-to="10000"
+            data-hide-min-max="true"
+            data-hide-from-to="true"
+          />
+          <div class="catalog-filter__range-inputs">
+            <input type="number" 
+              value="0"
+              class="catalog-filter__range-input catalog-filter__range-input--from">
+            <span></span>
+            <input type="number" 
+              value="10000"
+              class="catalog-filter__range-input catalog-filter__range-input--to">
+          </div>
+        </div>
+      </div>
+      <div class="catalog-filter__item">
+        <div class="catalog-filter__title">Power</div>
+        <div class="catalog-filter__checkboxes">
+          <label class="catalog-filter__label">
+            <input type="checkbox" name="name_1" class="catalog-filter__radiocheck" hidden>
+            <span class="catalog-filter__check"></span>
+            <span class="catalog-filter__input-name">7 kW</span>
+          </label>
+          <label class="catalog-filter__label">
+            <input type="checkbox" name="name_2" class="catalog-filter__radiocheck" hidden>
+            <span class="catalog-filter__check"></span>
+            <span class="catalog-filter__input-name">11 kW</span>
+          </label>
+          <label class="catalog-filter__label">
+            <input type="checkbox" name="name_3" class="catalog-filter__radiocheck" hidden>
+            <span class="catalog-filter__check"></span>
+            <span class="catalog-filter__input-name">20 kW</span>
+          </label>
+          <label class="catalog-filter__label">
+            <input type="checkbox" name="name_4" class="catalog-filter__radiocheck" hidden>
+            <span class="catalog-filter__check"></span>
+            <span class="catalog-filter__input-name">40 kW</span>
+          </label>
+        </div>
+      </div>
+      <div class="catalog-filter__item">
+        <div class="catalog-filter__title">Connector</div>
+        <div class="catalog-filter__radios">
+          <label class="catalog-filter__label">
+            <input type="radio" name="radio_name" value="radio_1" class="catalog-filter__radiocheck" hidden>
+            <span class="catalog-filter__check"></span>
+            <span class="catalog-filter__input-name">CHADEMO</span>
+          </label>
+          <label class="catalog-filter__label">
+            <input type="radio" name="radio_name" value="radio_2" class="catalog-filter__radiocheck" hidden>
+            <span class="catalog-filter__check"></span>
+            <span class="catalog-filter__input-name">CCS Combo 2</span>
+          </label>
+          <label class="catalog-filter__label">
+            <input type="radio" name="radio_name" value="radio_3" class="catalog-filter__radiocheck" hidden>
+            <span class="catalog-filter__check"></span>
+            <span class="catalog-filter__input-name">GB/T</span>
+          </label>
+          <label class="catalog-filter__label">
+            <input type="radio" name="radio_name" value="radio_4" class="catalog-filter__radiocheck" hidden>
+            <span class="catalog-filter__check"></span>
+            <span class="catalog-filter__input-name">TYPE 2</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="catalog-filter__actions">
+      <button class="catalog-filter__reset" type="button">
+        <img src="images/dist/x-btn.svg" alt="">
+        Clear
+      </button>
+      <button class="btn catalog-filter__apply" type="button">
+        <img src="images/dist/check.svg" class="before" alt="">
+        Apply filters
+      </button>
+    </div>
+  </form>
+</div>
+        </div>
+        <div class="catalog-wrapper__content catalog-wrapper__content--home">
+          <div class="catalog-business-wrapper">
+  <div class="catalog-business">
+    <a href="/" class="catalog-business__link"></a>
+    <div class="catalog-business__img">
+      <img src="images/dist/catalog-item.png" alt="">
+    </div>
+    <div class="catalog-business__content">
+      <div>
+        <div class="catalog-business__icons">
+          <div class="catalog-business__icon">
+            <img src="images/dist/conector.svg" alt=""> GB/T
+          </div>
+          <div class="catalog-business__icon">
+            <img src="images/dist/chademo.svg" alt=""> CHADEMO
+          </div>
+        </div>
+        <div class="catalog-business__title">MaxiCharger Commercial</div>
+        <div class="catalog-business__description">Our residential, commercial and fast charging stations are widely
+          compatible, built on open standards, and designed to be accessible for everyone.</div>
+        <div class="catalog-business__chars">
+          <div class="catalog-business__chars-item">
+            <div class="catalog-business__chars-k">
+              Power
+            </div>
+            <div class="catalog-business__chars-v">
+              ~150 kW
+            </div>
+          </div>
+          <div class="catalog-business__chars-item">
+            <div class="catalog-business__chars-k">
+              Charge time up to 80%
+            </div>
+            <div class="catalog-business__chars-v">
+              40 min
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="catalog-business__footer">
+        <div>
+          <div class="catalog-business__price-sup">Price</div>
+          <div class="catalog-business__price">1 999 $</div>
+        </div>
+        <button class="btn catalog-business__add" type="button">Add to cart</button>
+      </div>
+    </div>
+  </div>
+  <div class="catalog-business">
+    <a href="/" class="catalog-business__link"></a>
+    <div class="catalog-business__img">
+      <img src="images/dist/catalog-item.png" alt="">
+    </div>
+    <div class="catalog-business__content">
+      <div>
+        <div class="catalog-business__icons">
+          <div class="catalog-business__icon">
+            <img src="images/dist/conector.svg" alt=""> GB/T
+          </div>
+          <div class="catalog-business__icon">
+            <img src="images/dist/chademo.svg" alt=""> CHADEMO
+          </div>
+        </div>
+        <div class="catalog-business__title">MaxiCharger Commercial</div>
+        <div class="catalog-business__description">Our residential, commercial and fast charging stations are widely
+          compatible, built on open standards, and designed to be accessible for everyone.</div>
+        <div class="catalog-business__chars">
+          <div class="catalog-business__chars-item">
+            <div class="catalog-business__chars-k">
+              Power
+            </div>
+            <div class="catalog-business__chars-v">
+              ~150 kW
+            </div>
+          </div>
+          <div class="catalog-business__chars-item">
+            <div class="catalog-business__chars-k">
+              Charge time up to 80%
+            </div>
+            <div class="catalog-business__chars-v">
+              40 min
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="catalog-business__footer">
+        <div>
+          <div class="catalog-business__price-sup">Price</div>
+          <div class="catalog-business__price">1 999 $</div>
+        </div>
+        <button class="btn catalog-business__add" type="button" disabled>Item in cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__left">
+            <a href="/" class="footer__logo">
+              <img src="images/dist/footer-logo.svg" alt="">
+            </a>
+            <div class="footer__desk">
+              <a href="/" class="footer__tel">8 800 123 45 67</a>
+              <a href="" class="footer__email">info@icapia.com</a>
+              <div class="footer__socs">
+                <a href="/" class="footer__soc">
+                  <img src="images/dist/instagram.svg" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__right">
+            <div class="footer__list">
+              <div class="footer__item">
+                <div class="footer__title">Products</div>
+                <div class="footer__links">
+                  <a href="/" class="footer__link">Products for home</a>
+                  <a href="/" class="footer__link">Products for business</a>
+                  <a href="/" class="footer__link">Resources</a>
+                  <a href="/" class="footer__link">Ecology</a>
+                </div>
+              </div>
+              <div class="footer__item">
+                <div class="footer__title">ABOUT</div>
+                <div class="footer__links">
+                  <a href="/" class="footer__link">About Us</a>
+                  <a href="/" class="footer__link">Contact Us</a>
+                  <a href="/" class="footer__link">Team</a>
+                  <a href="/" class="footer__link">Jobs</a>
+                </div>
+              </div>
+              <div class="footer__item">
+                <div class="footer__title">INFO</div>
+                <div class="footer__links">
+                  <a href="/" class="footer__link">Support</a>
+                  <a href="/" class="footer__link">Terms of Service</a>
+                  <a href="/" class="footer__link">Cookies</a>
+                  <a href="/" class="footer__link">Privacy Police</a>
+                </div>
+              </div>
+            </div>
+            <div class="footer__app">
+              <div class="footer__app-title">Download app</div>
+              <div class="footer__apps">
+                <a href="/" class="footer__app-link">
+                  <img src="images/dist/app-store.svg" alt="">
+                </a>
+                <a href="/" class="footer__app-link">
+                  <img src="images/dist/play-market.svg" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="footer__mob">
+              <a href="/" class="footer__tel">8 800 123 45 67</a>
+              <a href="" class="footer__email">info@icapia.com</a>
+              <div class="footer__socs">
+                <a href="/" class="footer__soc">
+                  <img src="images/dist/instagram.svg" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>  
+  
+  
+  
+  </div>
+  <script src="js/app.min.js"></script>
+
+</body>
+</html>

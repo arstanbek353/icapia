@@ -1,0 +1,338 @@
+.product-detail {
+  padding-top: 2rem;
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+  }
+  &__slider {
+    width: 82rem;
+    margin: 0;
+  }
+  &__slide {
+    width: 100%;
+    height: 70.5rem;
+    background: #FFFFFF;
+    border-radius: 6.7rem;
+    overflow: hidden;
+    @include img-contain;
+  }
+  &__nav {
+    position: absolute;
+    bottom: 6.5rem;
+    right: 6.5rem;
+    z-index: 2;
+  }
+  &__prev,
+  &__next {
+    content: '';
+    display: inline-block;
+    width: 6rem;
+    height: 6rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &__prev {
+    background-image: url(../images/dist/prev-1.svg);
+  }
+  &__next {
+    background-image: url(../images/dist/next-1.svg);
+  }
+
+  @media (max-width: 48em) {
+    padding-top: 2rem;
+    &__head {
+      display: block;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+    &__slider {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    &__slide {
+      height: 33.5rem;
+      height: 29.7rem;
+      border-radius: 2rem;
+    }
+    &__nav {
+      bottom: 2rem;
+      right: 1.5rem;
+    }
+    &__prev,
+    &__next {
+      width: 4rem;
+      height: 4rem;
+    }
+    &__prev {
+      background-image: url(../images/dist/prev-2.svg);
+    }
+    &__next {
+      background-image: url(../images/dist/next-2.svg);
+    }
+  }
+}
+
+.product-info {
+  width: 82rem;
+  padding: 5.5rem;
+  background-color: #ffffff;
+  border-radius: 6.6rem;
+  display: flex;
+  flex-direction: column;
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5.8rem;
+  }
+  &__name {
+    color: rgba(0, 29, 38, 0.48);
+  }
+  &__review {
+    display: flex;
+    align-items: center;
+  }
+  &__stars {
+    display: inline-block;
+    position: relative;
+    margin-right: 1.4rem;
+    img {
+      display: block;
+      height: 2.8rem;
+      width: auto;
+      position: relative;
+      z-index: 2;
+    }
+  }
+  &__stars-border {
+    border: 1px solid #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &__stars-progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #F98418;
+  }
+  &__reviewes {
+    font-weight: 600;
+    font-size: 1.9rem;
+    letter-spacing: 0.005em;
+    color: #001D26;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 4.2rem;
+    line-height: 115.4%;
+    font-weight: 500;
+    letter-spacing: 0.025rem;
+    color: #000000;
+    margin-bottom: 3rem;
+  }
+  &__description {
+    font-size: 2rem;
+    line-height: 142.4%;
+    letter-spacing: 0.025rem;
+    margin-bottom: 3.5rem;
+  }
+  &__footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: auto;
+  }
+  &__price-sup {
+    font-weight: 500;
+    color: rgba(0, 29, 38, 0.48);
+  }
+  &__price {
+    font-weight: 600;
+    font-size: 5.5rem;
+    line-height: 115.4%;
+    letter-spacing: 0.025em;
+    color: #000;
+  }
+  &__add {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 1.4rem 5.5rem;
+    z-index: 2;
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      flex-shrink: 0;
+      margin-right: 1rem;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url(../images/dist/cart-white2.svg);
+    }
+  }
+  @media (max-width: 48em) {
+    width: 100%;
+    padding: 3.5rem 1.5rem;
+    border-radius: 2rem;
+    &__top {
+      margin-bottom: 3.5rem;
+    }
+    &__stars {
+      display: none;
+    }
+    &__reviewes {
+      font-size: 1.6rem;
+      color: #FA5507;
+    }
+    &__title {
+      font-size: 2.4rem;
+      margin-bottom: 2.5rem;
+    }
+    &__description {
+      font-size: 1.6rem;
+      margin-bottom: 3rem;
+    }
+    &__footer {
+      display: block;
+    }
+    &__price-sup {
+      font-size: 1.4rem;
+    }
+    &__price {
+      font-size: 3.2rem;
+    }
+    &__add {
+      width: 100%;
+      padding: 1.4rem 5.5rem;
+      margin-top: 2rem;
+      z-index: 2;
+      &::before {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 1rem;
+      }
+    }
+
+  }
+}
+
+.product-tab {
+  margin-bottom: 10rem;
+  &__inner {
+    padding: 4rem 6rem;
+    padding-bottom: 9rem;
+    background-color: #fff;
+    border-radius: 6.7rem;
+  }
+  &__tabs {
+    display: flex;
+    border-radius: 9rem;
+    margin-bottom: 4rem;
+    border-color: #F5F5F5;
+    border-style: solid;
+    border-width: 1rem 2rem;
+    background-color: #fff;
+  }
+  &__tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    letter-spacing: 0.005em;
+    color: #202020;
+    padding: 1.3rem 5rem;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 9rem;
+    transition-duration: 200ms;
+    transition-property: color, background;
+    margin-right: 1rem;
+    &.active,
+    &:hover {
+      font-weight: 600;
+      color: #fff;
+      background-color: #F98418;
+    } 
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__block {
+    opacity: 0;
+    position: relative;
+    z-index: -1;
+    height: 0;
+    &.active {
+      height: auto;
+      opacity: 1;
+      z-index: 1;
+    }
+  }
+  &__description {
+    font-size: 2.4rem;
+    line-height: 139%;
+    letter-spacing: 0.005em;
+    color: #001D26;
+  }
+  &__chars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4rem;
+  }
+  &__char-k {
+    font-size: 1.9rem;
+    font-weight: 500;
+    letter-spacing: 0.025rem;
+    line-height: 115.4%;
+    color: #A2A2A2;
+    margin-bottom: 1rem;
+  }
+  &__char-v {
+    font-weight: 600;
+    letter-spacing: 0.025rem;
+    line-height: 115.4%;
+    font-size: 2.2rem;
+    color: #000000;
+  }
+  @media (max-width: 48em) {
+    &__inner {
+      padding: 2rem 1.5rem;
+      border-radius: 2rem;
+    }
+    &__tabs {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      border: 0;
+      margin-bottom: 2.5rem;
+      background-color: #F8F8F8;
+    }
+    &__tab {
+      background-color: #F8F8F8;
+      font-size: 1rem;
+      padding: 1rem 2rem;
+      &:hover {
+        font-weight: 400;
+      }
+    }
+    &__description {
+      font-size: 1.4rem;
+    }
+    &__chars {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1.5rem;
+    }
+    &__char-k {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    &__char-v {
+      font-size: 1.6rem;
+    }
+  }
+}

@@ -1,0 +1,106 @@
+.banner {
+  margin-bottom: 3rem;
+  &--del {
+    .banner {
+      &__inner {
+        flex-direction: row-reverse;
+        padding-right: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      &__img {
+        padding-right: 0;
+      }
+      &__content {
+        padding-left: 0;
+        padding-right: 3rem;
+      }
+    }
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    padding: 9.3rem 5.3rem;
+    border-radius: 6.7rem;
+    background-color: #FFFFFF;
+  }
+  &__img {
+    flex-shrink: 0;
+    width: 50%;
+    padding-right: 3rem;
+  }
+  &__content {
+    width: 50%;
+    padding-left: 5rem;
+  }
+  &__title {
+    font-family: $secondfont;
+    font-size: 4.6rem;
+    line-height: 102%;
+    color: #000000;
+    letter-spacing: 0.025em;
+    margin-bottom: 2.5rem;
+  }
+  &__description {
+    font-family: $secondfont;
+    font-size: 2rem;
+    line-height: 116.5%;
+    color: #000000;
+    letter-spacing: 0.025em;
+    margin-bottom: 6rem;
+  }
+  &__link {
+    padding: 2rem 7.7rem;
+  }
+  @media (max-width: 48em) {
+    margin-bottom: 2rem;
+    &--del {
+      .banner {
+        &__inner {
+          flex-direction: row-reverse;
+          padding: 0;
+        }
+        &__img {
+          padding-right: 0;
+          margin-bottom: 0;
+          overflow: hidden;
+          img {
+            position: relative;
+            width: 110%;
+            left: -10%;
+          }
+        }
+        &__content {
+          padding: 1.5rem 2.3rem;
+        }
+      }
+    }
+    &__inner {
+      display: block;
+      padding: 3.7rem 1.5rem;
+      border-radius: 2.5rem;
+    }
+    &__img {
+      width: 100%;
+      padding-right: 0;
+      margin-bottom: 5rem;
+    }
+    &__content {
+      width: 100%;
+      padding-left: 0;
+    }
+    &__title {
+      font-size: 2.8rem;
+      margin-bottom: 2rem;
+    }
+    &__description {
+      font-size: 1.4rem;
+      margin-bottom: 4rem;
+    }
+    &__link {
+      width: 100%;
+      font-size: 1.4rem;
+      padding: 1.2rem 7rem;
+    }
+  }
+}

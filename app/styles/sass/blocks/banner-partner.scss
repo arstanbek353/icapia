@@ -1,0 +1,61 @@
+.banner-partner {
+  margin-bottom: 3rem;
+  &__inner {
+    position: relative;
+  }
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 6.7rem;
+    overflow: hidden;
+    @include img-cover;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4.5rem 9rem;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+  }
+  &__title {
+    font-family: $secondfont;
+    font-size: 3.8rem;
+    line-height: 102%;
+    letter-spacing: 0.025em;
+  }
+  &__description {
+    font-size: 2.2rem;
+    line-height: 116.5%;
+    letter-spacing: 0.025em;
+  }
+  &__link {
+    padding: 2rem 7.7rem;
+  }
+  @media (max-width: 48em) {
+    margin-bottom: 2rem;
+    &__bg {
+      border-radius: 2.5rem;
+    }
+    &__content {
+      display: block;
+      padding: 4.4rem 1.5rem;
+    }
+    &__title {
+      font-size: 2.8rem;
+      margin-bottom: 1.7rem;
+    }
+    &__description {
+      font-size: 1.6rem;
+      margin-bottom: 3.4rem;
+    }
+    &__link {
+      font-size: 1.4rem;
+      padding: 1rem 5.3rem;
+    }
+  }
+}

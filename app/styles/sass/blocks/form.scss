@@ -1,0 +1,122 @@
+.form {
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1.5rem;
+  }
+  &__item {
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    width: 100%;
+    &--50 {
+      width: 50%;
+    }
+  }
+  &__input {
+    width: 100%;
+    height: 8rem;
+    padding: 1rem 3rem;
+    background-color: #FFFFFF;
+    border: 1px solid #E1E1E1;
+    box-shadow: 2rem 3rem 6rem rgba(15, 7, 62, 0.05);
+    border-radius: 1rem;
+    color: #000;
+    &::placeholder {
+      color: #848794;
+    }
+  }
+  &__textarea {
+    width: 100%;
+    height: 8rem;
+    padding: 1rem 3rem;
+    padding-top: 2.7rem;
+    background-color: #FFFFFF;
+    border: 1px solid #E1E1E1;
+    box-shadow: 2rem 3rem 6rem rgba(15, 7, 62, 0.05);
+    border-radius: 1rem;
+    color: #000;
+    &::placeholder {
+      color: #848794;
+    }
+    &--big {
+      height: 15rem;
+    }
+  }
+  &__select {
+    width: 100%;
+    height: 8rem;
+    padding: 1rem 3rem;
+    background-color: #FFFFFF;
+    border: 1px solid #E1E1E1;
+    box-shadow: 2rem 3rem 6rem rgba(15, 7, 62, 0.05);
+    border-radius: 1rem;
+    color: #848794;
+    font: inherit;
+  }
+  &__actions {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    &--review {
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  &__send {
+    font-family: $secondfont;
+    font-size: 1.8rem;
+    padding: 1.8rem 11.8rem;
+  }
+  @media (max-width: 48em) {
+    &__inner {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -0.75rem;
+    }
+    &__item {
+      padding: 0.75rem;
+      font-size: 1.8rem;
+      &--50 {
+        width: 100%;
+      }
+    }
+    &__input {
+      width: 100%;
+      height: 6.3rem;
+      padding: 1rem 1.4rem;
+    }
+    &__textarea {
+      width: 100%;
+      height: 6.3rem;
+      padding: 1rem 1.4rem;
+      padding-top: 2.2rem;
+      &--big {
+        height: 10rem;
+      }
+    }
+    &__select {
+      width: 100%;
+      height: 6.3rem;
+      padding: 1rem 1rem;
+    }
+    &__actions {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: stretch;
+      &--review {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        .stars {
+          margin-bottom: 5rem;
+        }
+      }
+    }
+    &__send {
+      width: 100%;
+      font-size: 1.4rem;
+      padding: 1.8rem 5rem;
+    }
+  }
+}

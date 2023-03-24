@@ -1,0 +1,29 @@
+.stars {
+  display: flex;
+  flex-direction: row-reverse;
+  label {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    flex-shrink: 0;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../images/dist/empty-star.svg);
+    &:hover,
+    &:hover ~ label {
+      background-image: url(../images/dist/fill-star.svg);
+    }
+  }
+  input {
+    &:checked ~ label {
+      background-image: url(../images/dist/fill-star.svg);
+    }
+  }
+  @media (max-width: 48em) {
+    label {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+  }
+}

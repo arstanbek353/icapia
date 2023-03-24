@@ -51,15 +51,17 @@
       <div class="product-tab">
         <div class="product-tab__inner">
           <div class="product-tab__tabs">
-            <button class="product-tab__tab active">
-              Description
-            </button>
-            <button class="product-tab__tab">
-              Specifications
-            </button>
-            <button class="product-tab__tab">
-              Reviews
-            </button>
+            <div class="product-tab__tabs-border">
+              <button class="product-tab__tab active">
+                Description
+              </button>
+              <button class="product-tab__tab">
+                Specifications
+              </button>
+              <button class="product-tab__tab">
+                Reviews
+              </button>
+            </div>
           </div>
           <div class="product-tab__blocks">
             <div class="product-tab__block active">
@@ -205,7 +207,7 @@
                     <button class="review-slider__prev"></button>
                     <button class="review-slider__next"></button>
                   </div>
-                  <button class="btn review-slider__add-review">
+                  <button class="btn review-slider__add-review" data-class="review">
                     <img src="images/dist/add-review.svg" alt="">
                     Write a review</button>
                 </div>
@@ -215,6 +217,7 @@
         </div>
       </div>
     </div>
+    <!--#include virtual="/parts/product-other.html" -->
   </div>
 
 <!--#include virtual="/parts/footer.html" -->

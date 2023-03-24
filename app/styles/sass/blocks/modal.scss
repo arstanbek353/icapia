@@ -1,0 +1,112 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: auto;
+  z-index: -150;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 300ms;
+  padding: 3rem 0;
+  &.active {
+    z-index: 150;
+    opacity: 1;
+  }
+  &__inner {
+    margin: auto;
+    position: relative;
+    padding: 5rem;
+    min-width: 98rem;
+    background-color: #FFFFFF;
+    box-shadow: 3.2rem 1.6rem 6.4rem rgba(15, 7, 62, 0.06);
+    border-radius: 1.6rem;
+  }
+  &__close {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    img {
+      width: 2.5rem;
+    }
+  }
+  &__content {
+    position: relative;
+  }
+  @media (max-width: 48em) {
+    &__inner {
+      max-width: calc(100% - 3rem);
+      min-width: auto;
+      padding: 1.5rem;
+    }
+    &__close {
+      right: 1rem;
+      top: 1rem;
+      width: 3.5rem;
+      height: 3.5rem;
+      img {
+        width: 2rem;
+      }
+    }
+  }
+}
+
+.accepted {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__icon {
+    width: 6.6rem;
+    height: 6.6rem;
+    margin-bottom: 3rem;
+    @include img-contain;
+  }
+  &__title {
+    font-family: $secondfont;
+    font-weight: 700;
+    font-size: 3.8rem;
+    line-height: 116%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    margin-bottom: 2.4rem;
+  }
+  &__text {
+    font-family: $secondfont;
+    font-weight: 400;
+    font-size: 1.9rem;
+    line-height: 141.01%;
+    text-align: center;
+    letter-spacing: 0.035em;
+    color: #9E9D9D;
+    a {
+      font-weight: 600;
+      color: #E78512;
+    }
+  }
+  @media (max-width: 48em) {
+    padding: 5.4rem 0;
+    &__icon {
+      width: 6rem;
+      height: 6rem;
+      margin-bottom: 2.5rem;
+    }
+    &__title {
+      font-size: 2.2rem;
+      margin-bottom: 1.2rem;
+    }
+    &__text {
+      font-size: 1.6rem;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.contact-form {
+  background-color: #fff;
+  &__inner {
+    padding: 9rem 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 6rem;
+    line-height: 157.9%;
+    letter-spacing: 0.005em;
+    color: #12121A;
+    margin-bottom: 2.7rem;
+  }
+  &__text {
+    font-size: 2.4rem;
+    line-height: 138.4%;
+    letter-spacing: 0.005em;
+    color: #12121A;
+    a {
+      color: #E78512;
+    }
+  }
+  &__right {
+    width: 98rem;
+  }
+  @media (max-width: 48em) {
+    background-color: #fff;
+    &__inner {
+      padding-top: 4rem;
+      display: block;
+    }
+    &__left {
+      margin-bottom: 4rem;
+    }
+    &__title {
+      font-size: 3.2rem;
+      margin-bottom: 0.7rem;
+    }
+    &__text {
+      font-size: 1.8rem;
+    }
+    &__right {
+      width: 100%;
+    }
+  }
+}
+
+.modal {
+  .contact-form {
+    .container {
+      padding: 0;
+      width: 143.5rem;
+    }
+    &__inner {
+      padding-top: 4rem;
+      padding-bottom: 0;
+    }
+    @media (max-width: 48em) {
+      .container {
+        width: 100%;
+      }
+      &__inner {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+    }
+  }
+}

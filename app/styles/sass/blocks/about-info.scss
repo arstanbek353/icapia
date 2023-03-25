@@ -1,0 +1,124 @@
+.about-info {
+  margin-bottom: 14rem;
+  &__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem;
+    padding-left: 6rem;
+    background-color: #FFFFFF;
+    border-radius: 6.6rem;
+    margin-bottom: 3rem;
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+      padding-left: 4rem;
+      padding-right: 9rem;
+      .about-info__content {
+        width: 67rem;
+      }
+      .about-info__img {
+        &:first-child {
+          width: 36rem;
+        }
+        &:nth-child(2) {
+          width: 40rem;
+        }
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__content {
+    width: 56.8rem;
+  }
+  &__title {
+    font-family: $secondfont;
+    font-weight: 700;
+    font-size: 4.8rem;
+    letter-spacing: 0.02em;
+    color: #202226;
+    margin-bottom: 2.5rem;
+  }
+  &__text {
+    width: 61.8rem;
+    font-family: $secondfont;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #202226;
+  }
+  &__images {
+    display: flex;
+  }
+  &__img {
+    height: 44.2rem;
+    margin-right: 2.5rem;
+    border-radius: 5rem;
+    overflow: hidden;
+    @include img-cover;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:first-child {
+      width: 56rem;
+    }
+    &:nth-child(2) {
+      width: 32rem;
+    }
+  }
+  @media (max-width: 48em) {
+    &__block {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 1.5rem;
+      padding-top: 4rem;
+      border-radius: 2rem;
+      &:nth-child(even) {
+        flex-direction: column-reverse;
+        padding: 1.5rem;
+        padding-bottom: 4rem;
+        .about-info__content {
+          width: 100%;
+        }
+        .about-info__img {
+          &:first-child {
+            width: 100%;
+          }
+          &:nth-child(2) {
+            width: 100%;
+          }
+        }
+      }
+    }
+    &__content {
+      width: 100%;
+      margin-bottom: 1.7rem;
+    }
+    &__title {
+      font-size: 2.4rem;
+      margin-bottom: 1.8rem;
+    }
+    &__text {
+      width: 100%;
+    }
+    &__images {
+      display: block;
+    }
+    &__img {
+      height: 29.4rem;
+      margin-right: 0;
+      margin-bottom: 1.5rem;
+      border-radius: 2rem;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:first-child {
+        width: 100%;
+      }
+      &:nth-child(2) {
+        width: 100%;
+      }
+    }
+
+  }
+}

@@ -6,6 +6,7 @@ import catalog from '~/app/js/catalog.js'
 import productDetail from '~/app/js/product-detail.js'
 import review from '~/app/js/review.js'
 import modal from '~/app/js/modal.js'
+import about from '~/app/js/about.js'
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -15,5 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
   productDetail()
   review()
   modal()
+  about()
 
 })

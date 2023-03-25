@@ -1,0 +1,117 @@
+.about-stat {
+  margin-bottom: 14rem;
+  &__inner {
+    display: flex;
+  }
+  &__left {
+    padding-right: 4rem;
+  }
+  &__mtitle {
+    font-family: $secondfont;
+    font-weight: 700;
+    font-size: 7rem;
+    letter-spacing: 0.02em;
+    color: #202226;
+    margin-bottom: 2.5rem;
+  }
+  &__text {
+    font-family: $secondfont;
+    font-size: 2.2rem;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #202226;
+    margin-bottom: 4rem;
+  }
+  &__more {
+    font-size: 2rem;
+    padding: 2rem 8rem;
+  }
+  &__right {
+    font-family: $secondfont;
+    flex-shrink: 0;
+    width: 90rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10rem;
+  }
+  &__n {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+  }
+  &__w {
+    position: relative;
+  }
+  &__v {
+    font-size: 8.8rem;
+    line-height: 0.75;
+    color: #000000;
+  }
+  &__p {
+    font-size: 1.9rem;
+    line-height: 1.2;
+    color: #E5324C;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    padding-left: 1rem;
+  }
+  &__c {
+    font-size: 1.9rem;
+    line-height: 1.2;
+    color: #000000;
+    padding-left: 1rem;
+  }
+  &__name {
+    font-size: 2.7rem;
+    color: #000000;
+  }
+  @media (max-width: 48em) {
+    margin-bottom: 7rem;
+    &__inner {
+      display: block;
+    }
+    &__left {
+      padding-right: 0;
+      margin-bottom: 4rem;
+    }
+    &__mtitle {
+      font-size: 3.2rem;
+      margin-bottom: 1.2rem;
+    }
+    &__text {
+      font-size: 1.6rem;
+      margin-bottom: 0;
+    }
+    &__more {
+      width: 100%;
+      font-size: 1.4rem;
+      padding: 2rem 8rem;
+    }
+    &__right {
+      width: 100%;
+      grid-gap: 3rem 0;
+      margin-bottom: 4rem;
+    }
+    &__n {
+      margin-bottom: 1rem;
+    }
+    &__v {
+      font-size: 4.5rem;
+      line-height: 0.75;
+    }
+    &__p {
+      font-size: 1rem;
+      top: 0;
+      padding-left: 1rem;
+    }
+    &__c {
+      font-size: 1rem;
+      padding-left: 1rem;
+    }
+    &__name {
+      font-size: 1.4rem;
+    }
+
+  }
+}

@@ -1,0 +1,41 @@
+.about-banner {
+  padding-top: 2rem;
+  margin-bottom: 13rem;
+  &__img {
+    overflow: hidden;
+    border-radius: 2rem;
+    margin-bottom: 5rem;
+  }
+  &__content {
+    display: flex;
+  }
+  &__title {
+    width: 66.5rem;
+    font-family: $secondfont;
+    font-weight: 700;
+    font-size: 5.5rem;
+    letter-spacing: 0.02em;
+    color: #202226;
+  }
+  &__text {
+    width: 61.8rem;
+    font-family: $secondfont;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #202226;
+  }
+  @media (max-width: 48em) {
+    padding-top: 2rem;
+    margin-bottom: 7rem;
+    &__content {
+      display: block;
+    }
+    &__title {
+      width: 100%;
+      font-size: 3.2rem;
+    }
+    &__text {
+      width: 100%;
+    }
+  }
+}

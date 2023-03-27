@@ -1,0 +1,211 @@
+.article {
+  padding-top: 2rem;
+  margin-bottom: 13rem;
+  &__inner {
+    padding-top: 3rem;
+  }
+  &__top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 2.5rem;
+  }
+  &__top-item {
+    font-family: $secondfont;
+    font-weight: 400;
+    color: #1D1D1D;
+    margin-right: 16.8rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__h1 {
+    font-family: $secondfont;
+    font-weight: 700;
+    font-size: 5.3rem;
+    color: #010101;
+    margin-bottom: 4.5rem;
+  }
+  &__bottom {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+  &__bottom-item {
+    font-size: 2.2rem;
+    font-family: $secondfont;
+    font-weight: 400;
+    color: #1D1D1D;
+    margin-right: 16.8rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__share {
+    display: flex;
+    align-items: center;
+    font-size: 2.2rem;
+    font-family: $secondfont;
+    font-weight: 400;
+    color: #1D1D1D;
+    margin-left: auto;
+    p {
+      margin-right: 2rem;
+    }
+  }
+  &__img {
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 10rem;
+  }
+  &__content {
+    position: relative;
+    padding-left: 66rem;
+    font-family: $secondfont;
+    color: #000;
+    font-size: 2.8rem;
+    line-height: 141.3%;
+    h2 {
+      width: 66rem;
+      padding-right: 2rem;
+      position: absolute;
+      left: 0;
+      font-weight: 700;
+      font-size: 6.2rem;
+      line-height: 134.8%;
+      color: #242424;
+    }
+    h3 {
+      font-weight: 700;
+      color: #242424;
+      font-size: 3.7rem;
+      margin-bottom: 2.5rem;
+    }
+    p {
+      margin-bottom: 2rem;
+    }
+    blockquote {
+      display: block;
+      padding: 0;
+      margin: 0;
+      padding-left: 4rem;
+      position: relative;
+      font-weight: 700;
+      font-size: 2.6rem;
+      line-height: 153.3%;
+      color: #010101;
+      margin: 4rem 0;
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0.4rem;
+        height: 100%;
+        background-color: #E78512;
+      }
+    }
+    q {
+      display: block;
+      padding: 0;
+      margin: 0;
+      padding-left: 23rem;
+      padding-top: 4rem;
+      position: relative;
+      font-weight: 700;
+      font-size: 2.6rem;
+      line-height: 153.3%;
+      color: #010101;
+      margin: 4rem 0;
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 13rem;
+        top: 0;
+        width: 5.2rem;
+        height: 4.5rem;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url(../images/dist/q.svg);
+      }
+    }
+    img {
+      width: auto;
+      max-width: 100%;
+      margin-bottom: 4rem;
+    }
+  }
+  @media (max-width: 48em) {
+    padding-top: 2rem;
+    margin-bottom: 7rem;
+    &__inner {
+      padding-top: 2rem;
+    }
+    &__top {
+      margin-bottom: 2.5rem;
+    }
+    &__top-item {
+      font-size: 1rem;
+      margin-right: 5rem;
+    }
+    &__h1 {
+      font-size: 3.2rem;
+      margin-bottom: 2rem;
+    }
+    &__bottom {
+      display: block;
+      margin-bottom: 3rem;
+    }
+    &__bottom-item {
+      font-size: 1.6rem;
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
+    &__share {
+      font-size: 1.6rem;
+    }
+    &__img {
+      height: 19.3rem;
+      margin-bottom: 4rem;
+      @include img-cover;
+    }
+    &__content {
+      position: relative;
+      padding-left: 0;
+      font-size: 1.8rem;
+      h2 {
+        width: auto;
+        padding-right: 0;
+        position: static;
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+      }
+      h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      p {
+        margin-bottom: 2rem;
+      }
+      blockquote {
+        padding-left: 1.8rem;
+        font-size: 1.8rem;
+        margin: 4rem 0;
+      }
+      q {
+        padding-left: 6.5rem;
+        padding-top: 2.4rem;
+        font-size: 1.8rem;
+        margin: 4rem 0;
+        &::before {
+          left: 0;
+          top: 0;
+          width: 5.2rem;
+          height: 4.5rem;
+        }
+      }
+    }
+  }
+}

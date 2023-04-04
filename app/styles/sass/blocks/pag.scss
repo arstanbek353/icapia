@@ -1,0 +1,40 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 4rem;
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 3rem;
+    height: 3rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    color: #000;
+    &:hover {
+      border-color: #E78512;
+      background-color: #E78512;
+      color: #fff;
+    }
+  }
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 3rem;
+    height: 3rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    color: #000;
+    &.active, &:hover {
+      border-color: #E78512;
+      background-color: #E78512;
+      color: #fff;
+    }
+  }
+}

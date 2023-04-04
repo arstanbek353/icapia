@@ -1,6 +1,10 @@
 .catalog-wrapper {
   padding-top: 7rem;
   padding-bottom: 12rem;
+  &.loading {
+    opacity: 0.5;
+    pointer-events: none;
+  }
   &__inner {
     padding: 2rem 0;
     display: flex;

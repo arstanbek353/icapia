@@ -9,6 +9,7 @@ export default function modal() {
         this.closeHendler()
     }
     open() {
+      console.log(this)
       window.lastZIndexModal = window.lastZIndexModal ? window.lastZIndexModal + 1 : 150
       this.modal ? this.modal.style['z-index'] = window.lastZIndexModal : null;
       this.modal ? this.modal.classList.add('active') : null;
@@ -41,8 +42,8 @@ export default function modal() {
     }
   }
 
-  const modalCartadded = new Modal('cart-added');
-  window.modalCartadded = modalCartadded
+  const modalCartAdded = new Modal('cart-added');
+  window.modalCartAdded = modalCartAdded
 
   const modalApplicatioAccepted = new Modal('applicatio-accepted');
   window.modalApplicatioAccepted = modalApplicatioAccepted
@@ -55,4 +56,7 @@ export default function modal() {
 
   const modalContact = new Modal('contact');
   window.modalContact = modalContact
+
+  const modalOrder = new Modal('order');
+  window.modalOrder = modalOrder
 }

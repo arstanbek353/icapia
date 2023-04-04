@@ -17,7 +17,6 @@
 	<link rel="stylesheet" href="css/swiper-bundle.min.css">
 	<link rel="stylesheet" href="css/ion.rangeSlider.min.css">
 	<link rel="stylesheet" href="css/app.min.css">
-  
   <script src="js/jquery-3.6.4.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/ion.rangeSlider.min.js"></script>
@@ -54,20 +53,79 @@
       </div>
     </header>
   <div class="contacts">
-    <div class="brc">
-      <a href="/" class="brc__link">Home</a>
-      <a href="/" class="brc__link">News</a>
-      <a href="/" class="brc__link active">What is the future of EVs in India?</a>
-    </div>
     <div class="container">
+      <div class="brc">
+        <a href="/" class="brc__link">Home</a>
+        <a href="/" class="brc__link active">Contacts</a>
+      </div>
       <div class="contacts__inner">
         <div class="contacts__map">
 
         </div>
-        .contacts__
+        <div class="contacts__list">
+          <div class="contacts__item">
+            <div class="contacts__suptitle">Address</div>
+            <div class="contacts__title">23133 Hawthorne Boulevard, ofc 204 
+              Torrance, CA 90505</div>
+            <a href="/" class="contacts__link-map">look at the map</a>
+          </div>
+          <div class="contacts__item">
+            <div class="contacts__suptitle">Phone</div>
+            <div class="contacts__title">203-871-9283</div>
+            <div class="contacts__subtitle">We will quickly answer your questions</div>
+            <div class="contacts__work-time">
+              10:00 - 19:00
+              <span>mon - fri</span>
+            </div>
+          </div>
+          <div class="contacts__item">
+            <div class="contacts__suptitle">E-mail</div>
+            <div class="contacts__title">ranjiticapia@icapia.com</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+  <div class="contact-form">
+  <div class="container">
+    <div class="contact-form__inner">
+      <div class="contact-form__left">
+        <div class="contact-form__title">Contact us</div>
+        <div class="contact-form__text">
+          Use the form or email us 
+          <br>
+          <a href="mailto:ranjiticapia@icapia.com">ranjiticapia@icapia.com</a>
+        </div>
+      </div>
+      <div class="contact-form__right">
+        <form class="form js-contact-form">
+          <div class="form__inner">
+            <div class="form__item form__item--50">
+              <input type="text" name="name" class="form__input" placeholder="Your name" required>
+            </div>
+            <div class="form__item form__item--50">
+              <input type="email" name="email" class="form__input" placeholder="Email" required>
+            </div>
+            <div class="form__item form__item--50">
+              <input type="tel" name="tel" class="form__input" placeholder="Phone" required>
+            </div>
+            <div class="form__item form__item--50">
+              <select name="products" id="" class="form__select">
+                <option value="Products">Products</option>
+              </select>
+            </div>
+            <div class="form__item form__item--100">
+              <textarea name="comment" class="form__textarea" placeholder="Your message" required maxlength="500"></textarea>
+            </div>
+          </div>
+          <div class="form__actions">
+            <button class="btn form__send js-contact-btn">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
     <footer class="footer">
       <div class="container">
@@ -166,7 +224,7 @@
         <div class="accepted__icon">
           <img src="images/dist/accepted.svg" alt="">
         </div>
-        <div class="accepted__title">Thank you for feedback!</div>
+        <div class="accepted__title">Thank you for contact!</div>
         <div class="accepted__text">Your review has been received and will be published soon.</div>
       </div>
     </div>
@@ -183,7 +241,7 @@
           <img src="images/dist/accepted.svg" alt="">
         </div>
         <div class="accepted__title">Product moved to cart!</div>
-        <div class="accepted__text">Go to the <a href="/">shopping cart</a> to checkout or <br> view other products.</div>
+        <div class="accepted__text">Go to the <a href="/">shopping cart</a> to order or <br> view other products.</div>
       </div>
     </div>
   </div>
@@ -198,7 +256,7 @@
         <div class="review-form__inner">
           <div class="review-form__left">
             <div class="review-form__title">Write a review</div>
-            <div class="review-form__text"> You can leave a feedback so <br> we can improve our products </div>
+            <div class="review-form__text"> You can leave a contact so <br> we can improve our products </div>
           </div>
           <div class="review-form__right">
             <form class="form">
@@ -251,28 +309,72 @@
         </div>
       </div>
       <div class="contact-form__right">
-        <form class="form">
+        <form class="form js-contact-form">
           <div class="form__inner">
             <div class="form__item form__item--50">
-              <input type="text" class="form__input" placeholder="Your name" required>
+              <input type="text" name="name" class="form__input" placeholder="Your name" required>
             </div>
             <div class="form__item form__item--50">
-              <input type="text" class="form__input" placeholder="Email" required>
+              <input type="email" name="email" class="form__input" placeholder="Email" required>
             </div>
             <div class="form__item form__item--50">
-              <input type="text" class="form__input" placeholder="Phone" required>
+              <input type="tel" name="tel" class="form__input" placeholder="Phone" required>
             </div>
             <div class="form__item form__item--50">
-              <select name="" id="" class="form__select">
+              <select name="products" id="" class="form__select">
                 <option value="Products">Products</option>
               </select>
             </div>
             <div class="form__item form__item--100">
-              <textarea name="" class="form__textarea" placeholder="Your message" required maxlength="500"></textarea>
+              <textarea name="comment" class="form__textarea" placeholder="Your message" required maxlength="500"></textarea>
             </div>
           </div>
           <div class="form__actions">
-            <button class="btn form__send" data-class="applicatio-accepted">Submit</button>
+            <button class="btn form__send js-contact-btn">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+    <div class="modal close-x" data-modal="order">
+  <div class="modal__inner">
+    <button class="modal__close close-x" type="button">
+      <img class="close-x" src="images/dist/modal-close.svg" alt="">
+    </button>
+    <div class="modal__content">
+      <div class="contact-form">
+  <div class="container">
+    <div class="contact-form__inner">
+      <div class="contact-form__left">
+        <div class="contact-form__title">Order</div>
+        <div class="contact-form__text">
+          Use the form or email us 
+          <br>
+          <a href="mailto:ranjiticapia@icapia.com">ranjiticapia@icapia.com</a>
+        </div>
+      </div>
+      <div class="contact-form__right">
+        <form class="form js-form-order">
+          <div class="form__inner">
+            <div class="form__item form__item--100">
+              <input type="text" name="name" class="form__input" placeholder="Your name" required>
+            </div>
+            <div class="form__item form__item--50">
+              <input type="email" name="email" class="form__input" placeholder="Email" required>
+            </div>
+            <div class="form__item form__item--50">
+              <input type="tel" name="tel" class="form__input" placeholder="Phone" required>
+            </div>
+            <div class="form__item form__item--100">
+              <textarea name="comment" class="form__textarea" placeholder="Your message" required maxlength="500"></textarea>
+            </div>
+          </div>
+          <div class="form__actions">
+            <button class="btn form__send js-order">Order</button>
           </div>
         </form>
       </div>

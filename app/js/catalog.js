@@ -11,10 +11,6 @@ export default function () {
   const resetNode = document.querySelector('.catalog-filter__reset')
   const applyNode = document.querySelector('.catalog-filter__apply')
   const rangeNodes = document.querySelectorAll('.catalog-filter__range')
-  const paginationNode = document.querySelector('.pagination')
-  const paginationNextNode = document.querySelector('.pagination__btn--next')
-  const paginationPrevNode = document.querySelector('.pagination__btn--prev')
-  const paginationNodes = document.querySelectorAll('.pagination__link')
   const rangeInstanceArray = []
 
   const ApiGetProducts = (query) => {
@@ -68,10 +64,9 @@ export default function () {
       });
     })
   })
-  window.rangeInstanceArray = rangeInstanceArray
 
   resetNode.addEventListener('click', () => {
-    setPag(1)
+    setPagURL(1)
     formHeadNode.reset()
     formAsideNode.reset()
     rangeInstanceArray.forEach(instance => {
@@ -80,11 +75,12 @@ export default function () {
     setURLFromForm()
     ApiGetProducts(location.search).then((htmlData) => {
       content.innerHTML = htmlData
+      initPagNodes()
     })
   })
 
   applyNode.addEventListener('click', () => {
-    setPag(1)
+    setPagURL(1)
     const formData = getConcatFormData()
     for (var pair of formData.entries()) {
       // console.log(pair[0] + ', ' + pair[1]);
@@ -92,6 +88,7 @@ export default function () {
     setURLFromForm()
     ApiGetProducts(location.search).then((htmlData) => {
       content.innerHTML = htmlData
+      initPagNodes()
     })
   })
 
@@ -105,16 +102,18 @@ export default function () {
     formAsideNode.classList.remove('active')
   })
 
-  paginationNode.addEventListener('click', (e) => {
-    setPag(e)
-    ApiGetProducts(location.search).then((htmlData) => {
-      content.innerHTML = htmlData
-    })
+  document.addEventListener('click', (e) => {
+    if (e.target.dataset.page) {
+      setPagURL(e)
+      ApiGetProducts(location.search).then((htmlData) => {
+        content.innerHTML = htmlData
+      })
+    }
   })
 
   function setURLFromForm() {
     const formData = getConcatFormData()
-    const page = paginationNode.querySelector('.pagination__link.active').dataset.page
+    const page = document.querySelector('.pagination__link.active').dataset.page
     formData.set('page', page)
     let form_str = new URLSearchParams(formData).toString();
     const refresh = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + form_str;
@@ -174,15 +173,10 @@ export default function () {
     return formData
   }
 
-  function setPag(e, p) {
+  function setPagURL(e, p) {
     e && e?.preventDefault && e?.preventDefault()
     const page = +e?.target?.dataset?.page || p || e
-    const max = paginationNodes.length
     if (!page) return
-    paginationNodes.forEach(i => i.classList.remove('active'))
-    paginationNode.querySelector(`.pagination__link[data-page="${page}"]`).classList.add('active')
-    paginationPrevNode.dataset.page = page - 1 >= 0 ? page - 1 : 0
-    paginationNextNode.dataset.page = page >= max ? max : page + 1
     let urlparams = new URLSearchParams(location.search)
     urlparams.set('page', page)
     let params = urlparams.toString()

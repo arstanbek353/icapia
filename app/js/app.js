@@ -8,6 +8,8 @@ import modal from '~/app/js/modal.js'
 import about from '~/app/js/about.js'
 import cart from '~/app/js/cart.js'
 import contact from '~/app/js/contact.js'
+import search from '~/app/js/search.js'
+import nav from '~/app/js/nav.js'
 
 document.addEventListener('DOMContentLoaded', () => {
   mainSlider()
@@ -19,4 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
   about()
   cart()
   contact()
+  search()
+  nav()
 })

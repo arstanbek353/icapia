@@ -7,4 +7,5 @@ export const apiUrls = {
   getProducts: baseUrl + '/getProducts',
   contact: baseUrl + '/contact',
   review: baseUrl + '/review',
+  search: baseUrl + '/searchs',
 }

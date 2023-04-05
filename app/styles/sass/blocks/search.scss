@@ -1,0 +1,211 @@
+.search {
+  font-family: $secondfont;
+  margin-right: 6.6rem;
+  position: relative;
+  &__open {
+    width: 2.4rem;
+    height: 2.4rem;
+    opacity: 1;
+    @include img-contain;
+    &.active {
+      opacity: 0;
+    }
+  }
+  &__inner {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: -1.7rem;
+    &.active {
+      display: block;
+    }
+  }
+  &__label {
+    width: 59rem;
+    position: relative;
+    background-color: #FFFFFF;
+    border: 1px solid #E1E1E1;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    z-index: 3;
+  }
+  &__input {
+    font-size: 1.8rem;
+    padding: 1.8rem 2.5rem;
+    width: 100%;
+    padding-right: 5rem;
+    &::placeholder {
+      color: #848794;
+    }
+  }
+  &__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    img {
+      width: 1.4rem;
+    }
+  }
+  &__drop {
+    display: none;
+    padding: 5rem 2.3rem 3rem;
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+    top: -2rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 2rem 1.6rem rgba(0, 0, 0, 0.21);
+    &.active {
+      display: block;
+    }
+    &.loading {
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.7;
+        background-color: #fff;
+      }
+    }
+  }
+  &__list {
+    max-height: 38.4rem;
+    overflow: auto;
+    margin-bottom: 3rem;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__img {
+    width: 14.8rem;
+    height: 11rem;
+    background-color: #F3F3F3;
+    margin-right: 2rem;
+    @include img-contain;
+  }
+  &__brand {
+    font-size: 1.2rem;
+    letter-spacing: 0.035em;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.7rem;
+  }
+  &__name {
+    font-size: 1.9rem;
+    letter-spacing: 0.035em;
+    color: #141414;
+    font-weight: 500;
+  }
+  &__price {
+    font-weight: 700;
+    font-size: 1.9rem;
+    letter-spacing: 0.035em;
+    color: #141414;
+  }
+  &__all {
+    display: inline-flex;
+    align-items: center;
+    color: #E78512;
+    font-size: 1.8rem;
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 3rem;
+      height: 2rem;
+      margin-left: 0.4rem;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url(../images/dist/arrow-right-accent.svg);
+    }
+  }
+  @media (max-width: 48em) {
+    margin-right: 2.8rem;
+    position: static;
+    &__inner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 10;
+      padding: 1.5rem;
+      padding-top: 7rem;
+      background-color: #F8F8F8;
+      &.active {
+        display: block;
+      }
+    }
+    &__label {
+      width: 100%;
+      position: relative;
+      background-color: #FFFFFF;
+      border: 1px solid #E1E1E1;
+      border-radius: 1.2rem;
+      overflow: hidden;
+      z-index: 3;
+    }
+    &__input {
+      font-size: 1.4rem;
+      padding: 1.5rem 1.5rem;
+      width: 100%;
+      padding-right: 3rem;
+    }
+    &__close {
+      width: 3rem;
+      img {
+        width: 1rem;
+      }
+    }
+    &__drop {
+      padding: 4.5rem 1rem 3rem;
+      box-shadow: none;
+    }
+    &__list {
+      max-height: 56vh;
+    }
+    &__item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+    &__img {
+      width: 9.4rem;
+      height: 7rem;
+    }
+    &__brand {
+      font-size: 1rem;
+      margin-bottom: 0.7rem;
+    }
+    &__name {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+    &__price {
+      font-size: 1.4rem;
+    }
+    &__all {
+      display: flex;
+      justify-content: center;
+      font-size: 1.6rem;
+      &::after {
+        width: 3rem;
+        height: 2rem;
+      }
+    }
+  }
+}

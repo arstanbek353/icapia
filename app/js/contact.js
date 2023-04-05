@@ -1,13 +1,13 @@
 
-import {apiUrls} from './const.js'
+import {apiUrls, formDataToObject} from './const.js'
 
 const ApiContact = (data) => {
   console.log(apiUrls)
   return fetch(apiUrls.contact, {
     method: 'POST',
-    body: data,
+    body: JSON.stringify(data),
     headers: {
-      'Content-Type': 'multipart/form-data'
+      'Content-Type': 'application/json'
     }
   })
 }
@@ -16,9 +16,9 @@ const ApiReview = (data) => {
   console.log(apiUrls)
   return fetch(apiUrls.review, {
     method: 'POST',
-    body: data,
+    body: JSON.stringify(data),
     headers: {
-      'Content-Type': 'multipart/form-data'
+      'Content-Type': 'application/json'
     }
   })
 }
@@ -34,7 +34,7 @@ export default function () {
       const btnText = button.textContent
       button.setAttribute('disabled', true)
       button.textContent = 'Loading...'
-      ApiContact(formData).then(() => {
+      ApiContact(formDataToObject(formData)).then(() => {
         console.log('contact success')
         //window.modalApplicatioAccepted.open()
       }).catch(() => {
@@ -56,7 +56,7 @@ export default function () {
       const btnText = button.textContent
       button.setAttribute('disabled', true)
       button.textContent = 'Loading...'
-      ApiReview(formData).then(() => {
+      ApiReview(formDataToObject(formData)).then(() => {
         console.log('review success')
         window.modalApplicatioAccepted.open()
       }).catch(() => {

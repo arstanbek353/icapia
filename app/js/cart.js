@@ -1,4 +1,4 @@
-import {apiUrls} from './const.js'
+import {apiUrls, formDataToObject} from './const.js'
 
 class CartItem {
   constructor(element) {
@@ -137,9 +137,9 @@ const ApiRemoveItem = (data) => {
 const ApiOrderCart = (data) => {
   return fetch(apiUrls.orderCart, {
     method: 'POST',
-    body: data,
+    body: JSON.stringify(data),
     headers: {
-      'Content-Type': 'multipart/form-data'
+      'Content-Type': 'application/json'
     }
   })
 }
@@ -227,17 +227,15 @@ export default function () {
 
   orderForm.addEventListener('submit', (e) => {
     e.preventDefault()
-    const formData = new FormData(orderForm)
-
-    for (const [key, value] of Object.entries(cartTotal.data)) {
-      formData.append(key, value)
-    }
+    const data = formDataToObject(new FormData(orderForm))
+    console.log(data)
+    data.cart = cartTotal.data
 
     const btnText = orderButton.textContent
     cartTotal.disableOrderNodeButton(false)
     orderButton.setAttribute('disabled', true)
     orderButton.textContent = 'Loading...'
-    ApiOrderCart(formData).then(() => {
+    ApiOrderCart(data).then(() => {
       console.log('orderCart success')
       const promises = cartItemInstances.map(cartItem => {
         if (cartItem.checked) {

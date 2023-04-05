@@ -1,6 +1,11 @@
 .contacts {
+  &__inner {
+    padding-top: 2rem;
+  }
   &__map {
-    height: 10rem;
+    height: 53.3rem;
+    border-radius: 6rem;
+    overflow: hidden;
   }
   &__list {
     padding: 5rem 0 9rem;
@@ -55,8 +60,12 @@
     }
   }
   @media (max-width: 48em) {
+    &__inner {
+      padding-top: 1rem;
+    }
     &__map {
-      height: 10rem;
+      height: 32.1rem;
+      border-radius: 3rem;
     }
     &__list {
       padding: 3rem 0;

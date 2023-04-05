@@ -60,7 +60,6 @@ export default function () {
         element.removeAttribute('style')
       });
       inter = updatedProgressBullet()
-      console.log(e)
     });
     
     function updateNavText() {

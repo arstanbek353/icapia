@@ -1,0 +1,102 @@
+.map {
+  margin-bottom: 15rem;
+  &__inner {
+    display: flex;
+    background-color: #FFFFFF;
+    border-radius: 3.4rem;
+    overflow: hidden;
+  }
+  #map {
+    height: 78.1rem; /* The height is 400 pixels */
+    width: 95.4rem; /* The width is the width of the web page */
+  }
+  &__right {
+    padding: 6rem;
+    font-family: $secondfont;
+  }
+  &__title {
+    font-size: 3.4rem;
+    margin-bottom: 2.6rem;
+    span {
+      font-weight: 700;
+      font-size: 7.4rem;
+      color: #E78512;
+    }
+  }
+  &__text {
+    font-size: 2rem;
+    line-height: 142.4%;
+    letter-spacing: 0.025em;
+    margin-bottom: 6rem;
+  }
+  &__list {
+    height: 39.4rem;
+    overflow: auto;
+  }
+  &__item {
+    padding: 2.4rem 2rem;
+    color: #000000;
+    background-color: #F8F8F8;
+    border-radius: 2.4rem;
+    cursor: pointer;
+    margin-bottom: 1.4rem;
+    transition: 200ms;
+    &:hover {
+      color: #fff;
+      background-color: #E78512;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__local {
+    font-weight: 500;
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+  }
+  &__counter {
+    font-size: 1.4rem;
+    letter-spacing: 0.05em;
+  }
+  @media (max-width: 48em) {
+    margin-bottom: 15rem;
+    &__inner {
+      display: block;
+      border-radius: 2rem;
+    }
+    #map {
+      height: 39.4rem;
+      width: 100%;
+    }
+    &__right {
+      padding: 3rem 1.5rem;
+    }
+    &__title {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      span {
+        font-size: 3.2rem;
+      }
+    }
+    &__text {
+      font-size: 1.2rem;
+      margin-bottom: 2.5rem;
+    }
+    &__list {
+      height: 21rem;
+    }
+    &__item {
+      padding: 1.2rem 1.5rem;
+      border-radius: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    &__local {
+      font-size: 1.4rem;
+      margin-bottom: 0.4rem;
+    }
+    &__counter {
+      font-size: 1rem;
+    }
+  }
+}

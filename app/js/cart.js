@@ -1,11 +1,4 @@
-import {baseUrl} from './const.js'
-
-const apiUrls = {
-  addCartItem: baseUrl + '/addCartItem',
-  updateCartItem: baseUrl + '/updateCartItem',
-  removeCartItem: baseUrl + '/removeCartItem',
-  orderCart: baseUrl + '/orderCart', // оформить корзину
-}
+import {apiUrls} from './const.js'
 
 class CartItem {
   constructor(element) {

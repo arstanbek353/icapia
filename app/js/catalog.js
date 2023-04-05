@@ -1,8 +1,4 @@
-import { baseUrl } from './const.js'
-
-const apiUrls = {
-  getProducts: baseUrl + '/getProducts',
-}
+import { apiUrls } from './const.js'
 
 export default function () {
   const wrapper = document.querySelector('.catalog-wrapper')

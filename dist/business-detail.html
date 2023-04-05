@@ -17,6 +17,9 @@
 	<link rel="stylesheet" href="css/swiper-bundle.min.css">
 	<link rel="stylesheet" href="css/ion.rangeSlider.min.css">
 	<link rel="stylesheet" href="css/app.min.css">
+  <script src="https://unpkg.com/@googlemaps/markerclusterer@2.0.15/dist/index.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script type="module" src="js/map.js"></script>
   <script src="js/jquery-3.6.4.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/ion.rangeSlider.min.js"></script>
@@ -356,30 +359,30 @@
             <div class="review-form__text"> You can leave a contact so <br> we can improve our products </div>
           </div>
           <div class="review-form__right">
-            <form class="form">
+            <form class="form js-review-form">
               <div class="form__inner">
                 <div class="form__item">
-                  <input type="text" class="form__input" placeholder="Your name" required>
+                  <input type="text" name="name" class="form__input" placeholder="Your name" required>
                 </div>
                 <div class="form__item form__item--100">
-                  <textarea name="" class="form__textarea form__textarea--big" placeholder="Your message" required
+                  <textarea name="comment" class="form__textarea form__textarea--big" placeholder="Your message" required
                     maxlength="500"></textarea>
                 </div>
               </div>
               <div class="form__actions form__actions--review">
                 <div class="stars">
-                  <input type="radio" name="stars" id="star_5" class="visually-hidden" required>
+                  <input type="radio" name="stars" value="star_5" id="star_5" class="visually-hidden" required>
                   <label for="star_5"></label>
-                  <input type="radio" name="stars" id="star_4" class="visually-hidden" required>
+                  <input type="radio" name="stars" value="star_4" id="star_4" class="visually-hidden" required>
                   <label for="star_4"></label>
-                  <input type="radio" name="stars" id="star_3" class="visually-hidden" required>
+                  <input type="radio" name="stars" value="star_3" id="star_3" class="visually-hidden" required>
                   <label for="star_3"></label>
-                  <input type="radio" name="stars" id="star_2" class="visually-hidden" required>
+                  <input type="radio" name="stars" value="star_2" id="star_2" class="visually-hidden" required>
                   <label for="star_2"></label>
-                  <input type="radio" name="stars" id="star_1" class="visually-hidden" required>
+                  <input type="radio" name="stars" value="star_1" id="star_1" class="visually-hidden" required>
                   <label for="star_1"></label>
                 </div>
-                <button class="btn form__send"  data-class="review-accepted">Submit</button>
+                <button class="btn form__send  js-review-btn">Submit</button>
               </div>
             </form>
           </div>
@@ -482,6 +485,10 @@
   </div>
 </div>
   </div>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMF4zbNZ3i17RD5OkkD5H75ePPcio1Adg&callback=initMap&v=weekly"
+    defer
+  ></script>
   <script src="js/app.min.js"></script>
 
 </body>

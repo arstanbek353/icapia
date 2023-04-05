@@ -80,25 +80,4 @@ function initMap() {
 
 }
 
-// const locationGroups = [
-//   {
-//     center: { lat: 38.904625, lng: -77.036213 },
-//     label: "Washington",
-//     locations: [
-//       {position: { lat: 38.985791, lng: -77.124791 }, label: "a"},
-//       {position: { lat: 38.777338, lng: -77.143330 },label: "b"},
-//       {position: { lat: 38.859192, lng: -76.779408 },label: "c"},
-//     ]
-//   },
-//   {
-//     center: { lat: 40.676190, lng: -74.008581 },
-//     label: "New York",
-//     locations: [
-//       {position: { lat: 40.701833, lng: -74.171354 }, label: "d"},
-//       {position: { lat: 40.709473, lng: -74.092178 },label: "e"},
-//       {position: { lat: 40.626140, lng: -74.132374 },label: "f"},
-//     ]
-//   }
-// ]
-
 window.initMap = initMap;

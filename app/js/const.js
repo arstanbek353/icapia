@@ -7,7 +7,7 @@ export const apiUrls = {
   getProducts: baseUrl + '/getProducts', // получить товары по фильтру
   contact: baseUrl + '/contact', // запрос "связатся с нами"
   review: baseUrl + '/review', // оставить отзыв
-  search: baseUrl + '/searchs', // запрос на поиск товаров
+  search: baseUrl + '/search', // запрос на поиск товаров
 }
 
 export const formDataToObject = function(formData) {

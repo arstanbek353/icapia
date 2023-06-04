@@ -1,4 +1,4 @@
-export const baseUrl = 'http://example.com' // базовый url
+export const baseUrl = window.SiteBaseUrl || 'http://example.com' // базовый url
 export const apiUrls = {
   addCartItem: baseUrl + '/addCartItem', // добавить товар в корзину
   updateCartItem: baseUrl + '/updateCartItem', // !!< не реализрвано доконца >!! обновить товар в корзине

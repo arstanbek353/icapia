@@ -22,6 +22,9 @@
     justify-content: space-between;
     padding: 7.6rem 6.6rem;
     z-index: 2;
+    .main-prods__content {
+      display: none !important;
+    }
   }
   &__left {
     width: 68rem;

@@ -135,23 +135,24 @@
       background-color: #001D26;
     }
   }
-  &__nav {
-    position: absolute;
-    right: 0;
-  }
   &__prev,
   &__next {
+    position: absolute;
+    top: 39%;
     content: '';
     display: inline-block;
     width: 6em;
     height: 6em;
     background-repeat: no-repeat;
     background-size: contain;
+    z-index: 20;
   }
   &__prev {
+    left: 0;
     background-image: url(../images/dist/prev-1.svg);
   }
   &__next {
+    right: 1rem;
     background-image: url(../images/dist/next-1.svg);
   }
   @media (max-width: 48em) {
@@ -221,7 +222,6 @@
       }
     }
     &__controllers {
-      justify-content: flex-start;
       min-height: 4em;
       margin-top: 2em;
     }

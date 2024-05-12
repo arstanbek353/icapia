@@ -174,7 +174,7 @@
     display: flex;
     flex-wrap: wrap;
     label {
-      margin-right: 3.5rem;
+      width: 50%;
       margin-bottom: 1.5rem;
     }
   }
@@ -316,6 +316,11 @@
     &__title {
       font-size: 1.7rem;
       margin-bottom: 1.6rem;
+    }
+    &__checkboxes {
+      label {
+        width: 100%;
+      }
     }
   
     &__actions {
